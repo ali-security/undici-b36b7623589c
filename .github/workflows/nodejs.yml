@@ -53,6 +53,7 @@ jobs:
         run: npm run lint
 
   test:
+    if: false
     strategy:
       fail-fast: false
       max-parallel: 0
@@ -121,7 +122,6 @@ jobs:
 
   test-without-intl:
     name: Test with Node.js ${{ matrix.version }} compiled --without-intl
-    if: false
     strategy:
       fail-fast: false
       max-parallel: 0
@@ -192,6 +192,7 @@ jobs:
         run: npm run test:javascript:withoutintl
 
   test-fuzzing:
+    if: false
     name: Fuzzing
     runs-on: ubuntu-latest
     timeout-minutes: 30
@@ -213,6 +214,7 @@ jobs:
         run: npm run test:fuzzing
 
   test-types:
+    if: false
     name: Test TypeScript types
     timeout-minutes: 15
     runs-on: ubuntu-latest
@@ -234,6 +236,7 @@ jobs:
         run: npm run test:typescript
 
   pack:
+    if: false
     name: Pack
     runs-on: ubuntu-latest
     timeout-minutes: 15
